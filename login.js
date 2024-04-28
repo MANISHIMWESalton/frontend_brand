@@ -1,5 +1,5 @@
 const form = document.getElementById('myForm')
-const subm = document.getElementById('submit')
+const subm = document.getElementById('submit1')
 const email= document.getElementById('email')
 const password = document.getElementById('password')
 const emerror = document.getElementById('emerror')
@@ -16,48 +16,6 @@ function strongPassword(password){
     const isNumbers = numbers.test(password);
     return  isLowerCase && isUppreCase && isNumbers 
 }  
-
-async function login (){
-
-    const email = document.getElementById("email");
-    const password = document.getElementById("password");
-    const UserData = {
-  email: email.value,
-  password: password.value,
- 
-
-};
-
-try {
-  const response = await fetch(
-    "https://mybrand-backend-pqhx.onrender.com/api/users/login",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(UserData),
-    }
-  );
-
-  if (response.ok) {
-    const data = await response.json();
-    const token = data.message.token;
-    localStorage.setItem("token",token)
-    console.log(data.message);
-    window.location.href = "index.html"
-  } else {
-    const data = await response.json();
-
-    console.log(data.message );
-  }
-} catch (error) {
- console.log("An error occurred while submitting the form."+error);
-}
-}
-
-
-
 const store = []
 
 function resetForm(){
@@ -113,15 +71,36 @@ form.addEventListener('submit',(e)=>{
                 return;
             }
 
-            login()
-// const storeDate = {
-//     email:email.value,
-//     password:password.value
-// }
-// store.push(storeDate)
-
-// console.log(store)
-//     resetForm ()
-//     reset.textContent  = "Message sent successfully";
+          
 })
 
+
+
+
+
+
+const login = async(email,password)=>{
+  const res = await axios({
+    method:"POST",
+    url:"https://mybrandbackend-93l8.onrender.com/api/users/login",
+    data:{password,email}
+  })
+  console.log(res);
+  localStorage.setItem("jwt",res.data.token)
+  localStorage.setItem("user",res.data.user)
+  if(res.data.user.role === "admin"){
+    window.location.href = "dashboard/index.html"
+  }
+  else if(res.data.user.role === "user"){
+    window.location.href = "index.html"
+  }
+};
+
+subm.addEventListener('click',()=>{
+    console.log("fail");
+    const loginEmail= document.getElementById('email').value
+    const loginPassword = document.getElementById('password').value
+    console.log(loginEmail,loginPassword);
+  login(loginEmail,loginPassword)
+  
+});

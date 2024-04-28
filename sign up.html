@@ -16,8 +16,7 @@
         <nav class="main-nav">
             <ul class="list">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="portfolio.html">portfolio</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html" >Contact</a></li>
                     <!-- <li><a href="sign up.html" class="header-active">Login</a></li> -->
@@ -25,14 +24,11 @@
         </nav>
     </header>
     <div class="signup-box">
-        <form id="myForm">
+        <div id="myForm">
             <h1 id="h1">Sign Up</h1>
-            <label id="first">First Name</label>
+            <label id="first">Full Name</label>
             <input type="text" placeholder="" id="name" >
             <p  class="error-txt" id="ferror"> </p>
-            <label id="last">Last Name</label>
-            <input type="text" placeholder="" id="lasname">
-            <p class="error-txt" id="lerror"> </p>
             <label>Email</label>
             <input type="text" placeholder="" id="email">
             <p class="error-txt" id="emerror"> </p>
@@ -44,8 +40,8 @@
             <p class="error-txt" id="coferror"></p>
             <p id="myReset"></p>
             <p id="errorM"></p>
-            <input type="submit" value="Submit" id="submit1">
-        </form>
+            <button type="submit" id="submit1">Submit</button>
+        </div>
         <p class="para-2">Already  have an account? <a href="login.html">Login here</a> </p>
     </div>
     <footer>
@@ -57,7 +53,10 @@
             <a href=""><i class="fa-brands fa-youtube"></i></a>
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
+    integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/signup.js"></script>
         
 </body>
 </html>

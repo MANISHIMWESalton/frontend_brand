@@ -16,8 +16,7 @@
         <nav class="main-nav">
             <ul class="list">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="blog.html">blog</a></li>
-                    <li><a href="portfolio.html">portfolio</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html" class="header-active">Contact</a></li>
                     <!-- <li><a href="sign up.html">Sign Up</a></li> -->
@@ -52,35 +51,34 @@
         </div>
      <section class="contact">
         <h2>Contact Us</h2>
-        <form id="myform">
+        <div id="myform">
             <div class="input-box">
                 <div class="input-field">
-                    <input type="text" placeholder="Full Name" id="name" class="item" autocomplete="off">
+                    <input type="text" placeholder="First Name" id="firstname" class="item" autocomplete="off">
                     <p class="error-txt" id="error"></p>
                 </div>
                 <div class="input-field">
-                    <input type="text" placeholder="Email Address" id="Email" class="item" autocomplete="off">
+                    <input type="text" placeholder="last Name" id="lastname" class="item" autocomplete="off">
+                    <p class="error-txt" id="error"></p>
+                </div>
+                <div class="input-field">
+                    <input type="text" placeholder="Email Address" id="email" class="item" autocomplete="off">
+                    <p class="error-txt" id="emailerror"></p>
+                </div>
+                <div class="input-field">
+                    <input type="number" placeholder="Phone" id="phone" class="item" autocomplete="off">
                     <p class="error-txt" id="emailerror"></p>
                 </div>
                 </div>
-                <div class="input-box"> 
-                    <!-- <div class="input-field">
-                        <input type="text" placeholder="Phone Number" id="phone" class="item" autocomplete="off">
-                        <p class="error-txt" id="phoneError"></p>
-                    </div> -->
-                    <div class="input-field">
-                        <input type="text" placeholder="Subject" id="subject" class="item" autocomplete="off">
-                        <p class="error-txt" id="suberror"></p>
-                    </div>
-                </div>
+
             <div class="textarea-field">
-            <textarea name="" id="text1" cols="20" rows="5" placeholder="Your Message" class="item" autocomplete="off"></textarea>
-            <p class="error-txt" id="texerror"></p>
+                <textarea name="" id="text1" cols="20" rows="5" placeholder="Your Message" class="item" autocomplete="off"></textarea>
+                <p class="error-txt" id="texerror"></p>
             </div>
             <p id="myReset"></p>
             <p id="errorM"></p>
             <button type="submit" id="Submit">Send Message</button>
-        </form>
+        </div>
      </section>
     </div>
     <footer>
@@ -92,6 +90,10 @@
             <a href=""><i class="fa-brands fa-youtube"></i></a>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
+    integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="contact.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

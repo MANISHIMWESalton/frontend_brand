@@ -1,8 +1,9 @@
 .contact h2{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 30px;
+    font-size: 28px;
     align-items: center;
     margin-top: 40px;
+    margin-bottom: 13px;
     color: black;
 }
 .contact p{
@@ -25,13 +26,13 @@
     }
 
 .item{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     padding: 9px;
     outline: none;
     border-radius: 2px;
     border: 1px solid black;
-    font-size: 12px;
+    font-size: 15px;
     color: black;
     margin: 2px 0;
     resize: none;
@@ -73,6 +74,10 @@ button:hover{
     margin-top: 50px;
     display: flex;
     flex-direction: column;
+    font-size: 18px;
+}
+h4{
+    font-size: 30px;
 }
 .icon{
     margin-top: 60px;
@@ -146,7 +151,7 @@ footer{
     }
     body{
         font-family: Arial, Helvetica, sans-serif;
-        background-color: white;
+        background-color: rgba(248, 247, 247, 0.939);
     }
     header{
         background: black;
