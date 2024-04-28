@@ -50,7 +50,7 @@ form.addEventListener('submit',(e)=>{
         } else if(passwordValue.length<8){
             thereIsError = true;
             password.style.border = '1px solid red'
-            perror.textContent = 'password should have at least 8 charactor';
+            // perror.textContent = 'password should have at least 8 charactor';
         } 
         else if(!passWordValid){
             thereIsError = true;
