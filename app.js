@@ -88,17 +88,17 @@
 //     reset.textContent  = "Message sent successfully"
 
 // });
-const loginhied = document.getElementById("loginD")
-const login = document.getElementById("bloglink")
-if(localStorage.getItem("jwt")){
+// const loginhied = document.getElementById("loginD")
+// const login = document.getElementById("bloglink")
+// if(localStorage.getItem("jwt")){
    
-    loginhied.innerText = "logout"
-}else{
-    login.style.display="none"
-}
-loginhied.addEventListener("click",()=>{
-    if(localStorage.getItem("jwt")){
-        localStorage.removeItem("jwt")
-        window.location.href = ""
-    }
-})
+//     loginhied.innerText = "logout"
+// }else{
+//     login.style.display="none"
+// }
+// loginhied.addEventListener("click",()=>{
+//     if(localStorage.getItem("jwt")){
+//         localStorage.removeItem("jwt")
+//         window.location.href = ""
+//     }
+// })
