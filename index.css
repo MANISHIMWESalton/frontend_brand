@@ -6,7 +6,8 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+    background:#081b29;
+    color: white;
 }
 .container{
     display: flex;
@@ -68,9 +69,37 @@ bottom: 0;
 
 .part{
     margin: 30px;
+    width: 600px;
 }
-.soft{
+
+#btn-box{
+    width: 300px;
+    height: 40px;
+    justify-content: space-between;
+    display: flex;
     margin-bottom: 30px;
+}
+#btn-box a {
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 100%;
+    border: 2px solid #00abf0;
+    display: inline-flex;
+    font-size: 19px;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    
+
+}
+
+.soft{
+    font-size: 33px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .img1{
@@ -112,6 +141,10 @@ footer h4{
 
 p{
     margin-bottom: 20px;
+}
+#pra{
+font-size: 20px;
+color: #00abf0;
 }
 
 

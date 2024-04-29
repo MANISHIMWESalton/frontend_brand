@@ -99,6 +99,6 @@ if(localStorage.getItem("jwt")){
 loginhied.addEventListener("click",()=>{
     if(localStorage.getItem("jwt")){
         localStorage.removeItem("jwt")
-        window.location.href = "/login.html"
+        window.location.href = ""
     }
 })
