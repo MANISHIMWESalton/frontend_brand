@@ -33,5 +33,5 @@ const contact = async()=>{
 }
 
 document.getElementById("Submit").addEventListener("click",()=>{
-    contact()
+    contact();
 })
