@@ -12,54 +12,52 @@ const texerror = document.getElementById('texerror')
 
 
 submit.addEventListener('click', async () => {
-    const contact = {
-        firstname: FirstName.value,
-        lastname: LastName.value,
-        email: Email.value,
-        phone: Phone.value,
-        message: Message.value
-
-    }
     if (FirstName.value.trim() === '') {
         error.innerHTML = 'FirstName required'
-        FirstName.style.border = '1px solid red'
+
     } else if (!FirstName.value.trim() === '') {
         FirstName.style.border = '1px solid green'
-      
+
     }
     if (LastName.value.trim() === '') {
         errorl.innerHTML = 'LastName required'
-        LastName.style.border = '1px solid red'
+
     } else if (!LastName.value.trim() === '') {
         LastName.style.border = '1px solid green'
     }
 
     if (Email.value.trim() === '') {
         emailerror.innerHTML = 'LastName required'
-        Email.style.border = '1px solid red'
+
     } else if (!Email.value.trim() === '') {
         Email.style.border = '1px solid green'
     }
     if (Phone.value.trim() === '') {
         phonerror.innerHTML = 'LastName required'
-        Phone.style.border = '1px solid red'
+
     } else if (!Phone.value.trim() === '') {
         Phone.style.border = '1px solid green'
     }
     if (Message.value.trim() === '') {
         texerror.innerHTML = 'LastName required'
-        Message.style.border = '1px solid red'
+
     }
     else if (!Message.value.trim() === '') {
         Message.style.border = '1px solid green'
 
     } else {
-        await fetch('https://mybrandbackend-93l8.onrender.com/api/messages/', {
+        await fetch('http://localhost:9097/api/messages/', {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            method: 'POST',
-            body: JSON.stringify(contact)
+            body: JSON.stringify({
+                firstname: FirstName.value,
+                lastname: LastName.value,
+                email: Email.value,
+                phone: Phone.value,
+                message: Message.value
+            })
         }).then((response) => {
             if (!response.ok) {
                 console.log('error');

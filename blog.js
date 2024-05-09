@@ -1,13 +1,20 @@
+const spinner = document.getElementById('loading-spinner');
+function showLoading() {
+    spinner.style.display = 'block';
+}
 
+function hideLoading() {
+    spinner.style.display = 'none';
+}
 const fetchBlog = async()=>{
-    
+    showLoading()
     const res = await axios({
         method:"GET",
         url:"https://mybrandbackend-93l8.onrender.com/api/blog"
 
     })
-    console.log("Fetching blog...");
-    console.log(res);
+    if(res.status === 200) {
+    hideLoading()
     const blogs = res.data.data.Blogs    
     const article = document.getElementById("article");
     
@@ -22,4 +29,8 @@ const fetchBlog = async()=>{
         article.innerHTML += blogHTML;
     });
 }
+
+}
 fetchBlog()
+
+
