@@ -46,7 +46,7 @@ submit.addEventListener('click', async () => {
         Message.style.border = '1px solid green'
 
     } else {
-        await fetch('http://localhost:9097/api/messages/', {
+        await fetch('https://mybrandbackend-93l8.onrender.com/api/messages/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
